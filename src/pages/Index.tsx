@@ -109,7 +109,10 @@ export default function Index() {
       const connector = isLastNode ? '└── ' : '├── ';
       const icon = node.type === 'dir' ? '📁 ' : '📄 ';
       
-      result += prefix + connector + icon + node.name + '\n';
+       const currentPrefix = isLast ? prefix : '│   ' + prefix;
+      // result += prefix + connector + icon + node.name + '\n';
+        result += currentPrefix + connector + icon + node.name + '\n';
+
       
       if (node.children && node.children.length > 0) {
         const newPrefix = prefix + (isLastNode ? '    ' : '│   ');
