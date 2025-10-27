@@ -9,6 +9,8 @@ import { toast } from 'sonner';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 
+import {  Linkedin, Youtube, Globe } from "lucide-react";
+
 interface RepoData {
   name: string;
   description: string;
@@ -420,7 +422,7 @@ ${repoData.license ? `This project is licensed under the ${repoData.license.name
 
 ---
 
-*Generated with ❤️ by GitHub Documentation Generator*
+*Generated with ❤️ by Rakesh Kumar*
 `;
   };
 
@@ -698,11 +700,54 @@ ${repoData.license ? `This project is licensed under the ${repoData.license.name
       </main>
 
       {/* Footer */}
-      <footer className="border-t mt-12 py-6 bg-white/50 backdrop-blur-sm">
+      {/* <footer className="border-t mt-12 py-6 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>Built with ❤️ using React, TypeScript, and Shadcn UI</p>
+          <p>Built with ❤️ By Rakesh</p>
         </div>
-      </footer>
+      </footer> */}
+      <footer className="border-t mt-12 py-6 bg-white/50 backdrop-blur-sm">
+      <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
+        <p className="mb-3">Built with ❤️ by Rakesh</p>
+
+        <div className="flex justify-center gap-4 text-gray-600">
+          <a
+            href="https://github.com/Rakesh709"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            <Github size={20} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rakesh-kumar07"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
+
+          <a
+            href="https://www.youtube.com/@bucketflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            <Youtube size={20} />
+          </a>
+
+          <a
+            href="https://portfolio-ten-omega-11.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors"
+          >
+            <Globe size={20} />
+          </a>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
